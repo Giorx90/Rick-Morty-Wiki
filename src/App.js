@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import HomePage from './pages/HomePage';
 import CharactersPage from './pages/CharactersPage';
@@ -8,14 +8,17 @@ import SingleLocationPage from './pages/SingleLocationPage';
 import ChronologyPage from './pages/ChronologyPage';
 import NavigationComponent from './components/NavigationComponent/NavigationComponent';
 import TranslationComponent from './components/TranslationComponent/TranslationComponent';
+import { RMContextProvider } from './context/context';
 
 function App() {
   return (
     <div className="App">
-      <div class="App-trans">
+    <RMContextProvider>
+    <Router>
+      <div className="App-trans">
         <TranslationComponent></TranslationComponent>
       </div>
-      <div class="App-routes">
+      <div className="App-routes">
         <Routes>
           <Route exact path="/" element={<HomePage/>}></Route>
           <Route exact path="/characters" element={<CharactersPage/>}></Route>
@@ -25,9 +28,11 @@ function App() {
           <Route exact path="/chronology" element={<ChronologyPage/>}></Route>
         </Routes>
       </div>
-      <div class="App-nav">
+      <div className="App-nav">
         <NavigationComponent></NavigationComponent>
       </div>
+      </Router>
+      </RMContextProvider>
     </div>
   );
 }

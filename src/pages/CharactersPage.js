@@ -6,7 +6,7 @@ const CharactersPage = () => {
   return (
     <div>
       <Link className='nav-link' to="/">Home</Link>
-      <CharactersComponent></CharactersComponent>
+        <CharactersComponent></CharactersComponent>
     </div>
   )
 }

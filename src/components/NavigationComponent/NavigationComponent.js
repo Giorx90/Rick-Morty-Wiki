@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './NavigationComponent.module.scss';
+import styles from './NavigationComponent.scss';
 import { Link } from 'react-router-dom';
 
 const NavigationComponent = () => (
