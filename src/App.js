@@ -4,7 +4,6 @@ import HomePage from './pages/HomePage';
 import CharactersPage from './pages/CharactersPage';
 import SingleCharacterPage from './pages/SingleCharacterPage';
 import LocationsPage from './pages/LocationsPage';
-import SingleLocationPage from './pages/SingleLocationPage';
 import ChronologyPage from './pages/ChronologyPage';
 import NavigationComponent from './components/NavigationComponent/NavigationComponent';
 import TranslationComponent from './components/TranslationComponent/TranslationComponent';
@@ -24,7 +23,6 @@ function App() {
           <Route exact path="/characters" element={<CharactersPage/>}></Route>
           <Route exact path="/character/:id" element={<SingleCharacterPage/>}></Route>
           <Route exact path="/locations" element={<LocationsPage/>}></Route>
-          <Route exact path="/location/:id" element={<SingleLocationPage/>}></Route>
           <Route exact path="/chronology" element={<ChronologyPage/>}></Route>
         </Routes>
       </div>

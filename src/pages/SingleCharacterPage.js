@@ -5,7 +5,7 @@ import SingleCharacterComponent from './../components/SingleCharacterComponent/S
 const SingleCharacterPage = () => {
   return (
     <div>
-      <Link className='nav-link' to="/characters">Volver</Link>
+      <Link className='nav-link' to="/characters">Characters</Link>
       <SingleCharacterComponent></SingleCharacterComponent>
     </div>
   )

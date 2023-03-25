@@ -1,5 +1,20 @@
-.CharactersComponent {}
-
-.characters-container {
-    display: flex;
+.CharactersComponent {
+    .charactersContainer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        .characterCard {
+            height: 250px;
+            width: 150px;
+            padding: 10px;
+            position: relative;
+            p {
+                font-size: medium;
+            }
+            img {
+                height: 150px;
+            }
+        }
+    } 
 }

@@ -9,14 +9,22 @@ export const RMContextProvider = ({children}) => {
     const [characters, setCharacters] = useState([])
     const [locations, setLocations] = useState([])
 
-    useEffect(() =>{
-        const getCharacters = async () => {
-            const charactersAPI =await axios.get(`${baseUrl}/character`)
-            setCharacters(charactersAPI.data.results);
+    useEffect(() => {
+        fetchData(`${baseUrl}/character`);
+      }, []);
+    
+      const fetchData = async (url) => {
+        const res = await fetch(url);
+        const data = await res.json();
+        setCharacters((_characters) => {
+          return [..._characters, ...data.results];
+        });
+        if (data.info && data.info.next) {
+          fetchData(data.info.next);
         }
-        getCharacters()
+      };
 
-    }, [])
+
 
     useEffect(() =>{
         const getLocations = async () => {
