@@ -1,20 +1,37 @@
 .CharactersComponent {
     .charactersContainer {
+        height: 500px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-around;
         .characterCard {
+            background-color: rgb(0, 0, 0);
+            border-radius: 10px;
+            border: solid;
+            border-color: blue;
             height: 250px;
             width: 150px;
-            padding: 10px;
+            padding: 5px;
+            margin: 5px;
             position: relative;
-            p {
-                font-size: medium;
-            }
-            img {
-                height: 150px;
-            }
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            div{
+                p {
+                    font-size: medium;
+                    color:aliceblue;
+                    text-decoration: none;
+                    
+                }
+                img {
+                    height: 150px;
+                    position:relative;
+                    bottom: 0px;
+                }
+            }      
         }
     } 
 }

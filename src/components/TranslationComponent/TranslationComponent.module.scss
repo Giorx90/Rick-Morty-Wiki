@@ -1,1 +1,12 @@
-.TranslationComponent {}
+.TranslationComponent {
+    display: flex;
+    .TransImg {
+            width: 35px;
+            height: 25px;
+            padding: 5px;
+            :hover {
+                zoom: 25%;
+            }
+    }
+}
+

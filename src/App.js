@@ -9,6 +9,7 @@ import NavigationComponent from './components/NavigationComponent/NavigationComp
 import TranslationComponent from './components/TranslationComponent/TranslationComponent';
 import { RMContextProvider } from './context/context';
 
+
 function App() {
   return (
     <div className="App">
